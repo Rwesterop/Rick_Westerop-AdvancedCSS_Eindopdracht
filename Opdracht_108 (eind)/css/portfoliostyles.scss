@@ -1,0 +1,143 @@
+Body {
+    background-color: #c3cfe2;
+}
+.wrapper{ 
+    display:grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto;
+    margin:0;
+}
+.Container{
+    position:relative;
+    margin: 10px;
+    max-width: 350px;
+}
+.Portfolio-image{
+    overflow: hidden;
+}
+.Portfolio-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+.Portfolio-button{
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration:none;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .8s;
+  background: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.Container:hover .Portfolio-button{
+    opacity: 1;
+  }
+
+img{
+    max-width: 350px;
+    height: auto;
+
+}
+@mixin socialposition {
+    padding-left: 25px;
+    position: relative;
+    right: -75%;
+}
+.social-container{
+    display: grid;
+    grid-template-rows: 30px 30px 30px 30px 30px;
+    top: 20%;
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.836);
+    padding: 4px;
+    position: absolute;
+    right: 0px;
+}
+.social-mediablog {
+    background-color: #e17b77;
+   @include socialposition;
+}
+.social-mediafacebook {
+    background-color: #3b5998;
+    @include socialposition;
+}
+.social-mediatwitter {
+    background-color: #00aced;
+    @include socialposition;
+}
+.social-mediagithub {
+    background-color: #333;
+    @include socialposition;
+}
+.social-medialinkedin {
+    background-color: #007bb6;
+    @include socialposition;
+}
+.social-mediablog:hover{
+    transition: 0.8s;
+    right:0px;
+}
+.social-mediatwitter:hover{
+    transition: 0.8s;
+    right:0px;
+}
+.social-medialinkedin:hover{
+    transition: 0.8s;
+    right:0px;
+}
+.social-mediafacebook:hover{
+    transition: 0.8s;
+    right:0px;
+}
+.social-mediagithub:hover{
+    transition: 0.8s;
+    right:0px;
+}
+.social-mediafacebook > img {
+    width: 20px;
+    background-color: white;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+.social-mediablog > img {
+    width: 20px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+.social-mediatwitter > img {
+    width: 20px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+.social-medialinkedin > img {
+    width: 20px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+.social-mediagithub > img {
+    width: 20px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+@media  (min-width: 768px) {
+    .wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+}}
+@media  (min-width: 1024px) {
+    .wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}} 
